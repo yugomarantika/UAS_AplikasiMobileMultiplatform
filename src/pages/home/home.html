@@ -1,0 +1,22 @@
+<ion-header style="background-color: #2faaff;">
+  <ion-navbar >
+    <ion-title >Breaking News</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let article of articles">
+    <img src="{{article.urlToImage}}"/>
+    <ion-card-header>
+     {{article.title}}
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        {{article.description}}
+      </p>
+      <a fill="outline" href="{{article.url}}" large>Selengkapnya...</a>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
